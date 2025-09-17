@@ -1,0 +1,108 @@
+public class SustainableConsumptionSystem {
+
+    // Producer
+    static class Producer {
+        private int producerId;
+        private String name;
+        private String industry;
+
+        public Producer(int producerId, String name, String industry) {
+            this.producerId = producerId;
+            this.name = name;
+            this.industry = industry;
+        }
+
+        public int getProducerId() { return producerId; }
+        public void setProducerId(int producerId) { this.producerId = producerId; }
+
+        public String getName() { return name; }
+        public void setName(String name) { this.name = name; }
+
+        public String getIndustry() { return industry; }
+        public void setIndustry(String industry) { this.industry = industry; }
+
+        public void showProducer() {
+            System.out.println("Producer ID : " + producerId);
+            System.out.println("Name        : " + name);
+            System.out.println("Industry    : " + industry);
+        }
+    }
+
+    // Product
+    static class Product {
+        private int productId;
+        private String productName;
+        private boolean ecoFriendly;
+        private boolean recyclable;
+
+        public Product(int productId, String productName, boolean ecoFriendly, boolean recyclable) {
+            this.productId = productId;
+            this.productName = productName;
+            this.ecoFriendly = ecoFriendly;
+            this.recyclable = recyclable;
+        }
+
+        public int getProductId() { return productId; }
+        public void setProductId(int productId) { this.productId = productId; }
+
+        public String getProductName() { return productName; }
+        public void setProductName(String productName) { this.productName = productName; }
+
+        public boolean isEcoFriendly() { return ecoFriendly; }
+        public void setEcoFriendly(boolean ecoFriendly) { this.ecoFriendly = ecoFriendly; }
+
+        public boolean isRecyclable() { return recyclable; }
+        public void setRecyclable(boolean recyclable) { this.recyclable = recyclable; }
+
+        public void showProduct() {
+            System.out.println("Product ID   : " + productId);
+            System.out.println("Name         : " + productName);
+            System.out.println("Eco-Friendly : " + (ecoFriendly ? "Yes" : "No"));
+            System.out.println("Recyclable   : " + (recyclable ? "Yes" : "No"));
+        }
+    }
+
+    // Consumer
+    static class Consumer {
+        private int consumerId;
+        private String name;
+        private String awarenessLevel; // e.g. Low, Medium, High
+
+        public Consumer(int consumerId, String name, String awarenessLevel) {
+            this.consumerId = consumerId;
+            this.name = name;
+            this.awarenessLevel = awarenessLevel;
+        }
+
+        public int getConsumerId() { return consumerId; }
+        public void setConsumerId(int consumerId) { this.consumerId = consumerId; }
+
+        public String getName() { return name; }
+        public void setName(String name) { this.name = name; }
+
+        public String getAwarenessLevel() { return awarenessLevel; }
+        public void setAwarenessLevel(String awarenessLevel) { this.awarenessLevel = awarenessLevel; }
+
+        public void showConsumer() {
+            System.out.println("Consumer ID     : " + consumerId);
+            System.out.println("Name            : " + name);
+            System.out.println("Awareness Level : " + awarenessLevel);
+        }
+    }
+
+    // Main
+    public static void main(String[] args) {
+        Producer producer = new Producer(1, "GreenLife Corp", "Sustainable Packaging");
+        Product product = new Product(101, "Reusable Water Bottle", true, true);
+        Consumer consumer = new Consumer(201, "Maria Cruz", "High");
+
+        producer.showProducer();
+        System.out.println();
+
+        product.showProduct();
+        System.out.println();
+
+        consumer.showConsumer();
+    }
+}
+Sumulat sa Benaldo Bianca
